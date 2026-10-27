@@ -55,7 +55,7 @@ jobs:
           node-version: '22'
       - name: Validate generated HTML
         run: |
-          npm install --ignore-scripts --no-audit --no-fund
+          npm ci --ignore-scripts --no-audit --no-fund
           npm run validate:html
       - name: Validate activity markers, rendered content and local links
         run: python3 scripts/validate_site.py _site
