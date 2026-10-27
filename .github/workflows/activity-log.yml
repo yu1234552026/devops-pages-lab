@@ -1,0 +1,28 @@
+name: Update activity log
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: activity-log
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require the owner's personal access token
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo '::error::Create an expiring classic PAT with public_repo and save it as repository secret TOKEN.'
+            exit 1
+          fi
+      - uses: TheDanniCraft/activity-log@v1
+        with:
+          GITHUB_USERNAME: yu1234552026
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          HIDE_DETAILS_ON_PRIVATE_REPOS: 'true'

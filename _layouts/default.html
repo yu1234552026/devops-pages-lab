@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description | escape }}">
+  <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="masthead"><a href="{{ '/' | relative_url }}">YU / DEVOPS LAB</a><a href="https://github.com/yu1234552026/devops-pages-lab">View source ↗</a></header>
+  <main>
+    <div class="eyebrow">GITHUB PAGES · ACTIVITY LOG · CI/CD</div>
+    <section class="hero"><p class="issue">LEARNING IN PUBLIC / 2026</p><h1>Small changes.<br>Safer releases.</h1><p>A living record of development activity,<br>built and verified before it reaches the web.</p></section>
+    <div class="pipeline" aria-label="Deployment pipeline"><span>01 / BUILD</span><span>02 / VALIDATE</span><span>03 / DEPLOY</span></div>
+    <article>{{ content }}</article>
+  </main>
+  <footer>yu1234552026 <span>DevOps coursework / GitHub Pages</span></footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+name: Build, validate and deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      demonstrate_failure:
+        description: 'Inject a broken local link to prove that validation blocks deployment'
+        type: boolean
+        required: false
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Write the source revision
+        run: printf '%s\n' "$GITHUB_SHA" > _site/version.txt
+      - name: Inject deliberate broken link into the build
+        if: ${{ inputs.demonstrate_failure == true }}
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('_site/index.html')
+          p.write_text(p.read_text().replace('</article>', '<a href="missing-demo-page.html">Deliberate broken link</a></article>'))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: built-site
+          path: _site/
+          retention-days: 7
+  validate:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: built-site
+          path: _site/
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate generated HTML
+        run: npx --yes html-validate@10.5.0 '_site/**/*.html'
+      - name: Validate activity markers, rendered content and local links
+        run: python3 scripts/validate_site.py _site
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site/
+  deploy:
+    runs-on: ubuntu-latest
+    needs: validate
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish the validated artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,12 @@
+title: DevOps / yu1234552026
+description: Automated activity. Verified releases.
+url: https://yu1234552026.github.io
+baseurl: /devops-pages-lab
+markdown: kramdown
+exclude:
+  - scripts
+  - docs
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
