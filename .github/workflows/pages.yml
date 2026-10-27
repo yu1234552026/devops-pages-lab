@@ -25,7 +25,9 @@ jobs:
           source: ./
           destination: ./_site
       - name: Write the source revision
-        run: printf '%s\n' "$GITHUB_SHA" > _site/version.txt
+        run: |
+          sudo chown -R "$(id -u):$(id -g)" _site
+          printf '%s\n' "$GITHUB_SHA" > _site/version.txt
       - name: Inject deliberate broken link into the build
         if: ${{ inputs.demonstrate_failure == true }}
         run: |
