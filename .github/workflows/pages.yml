@@ -54,7 +54,9 @@ jobs:
         with:
           node-version: '22'
       - name: Validate generated HTML
-        run: npx --yes html-validate@10.5.0 '_site/**/*.html'
+        run: |
+          npm install --ignore-scripts --no-audit --no-fund
+          npm run validate:html
       - name: Validate activity markers, rendered content and local links
         run: python3 scripts/validate_site.py _site
       - uses: actions/upload-pages-artifact@v4

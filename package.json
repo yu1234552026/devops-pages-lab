@@ -1,0 +1,11 @@
+{
+  "name": "devops-pages-lab",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "validate:html": "html-validate \"_site/**/*.html\""
+  },
+  "devDependencies": {
+    "html-validate": "10.5.0"
+  }
+}
