@@ -28,4 +28,13 @@ The manual `demonstrate_failure` option inserts a broken local link into the gen
 
 The gate detects the checks implemented here; it does not prove accessibility, factual accuracy or availability after deployment. A next improvement is to check `version.txt` on the live site against the deployed commit SHA, then add a versioned release asset for rollback. Those are future improvements and are not claimed as completed techniques.
 
+## Observed demonstration on 27 October 2026
+
+- [Normal deployment: build, validate and deploy passed](https://github.com/yu1234552026/devops-pages-lab/actions/runs/40486996892).
+- [Deliberate failure: build passed, validate failed, deploy was skipped](https://github.com/yu1234552026/devops-pages-lab/actions/runs/40487222512).
+- The validator reported `broken local link: missing-demo-page.html`.
+- Immediately before and after the failed run, the live `version.txt` remained `acb8b9adbee233533bbab8d6a79185c230c5b94b`. The failed build did not replace the live site.
+
+Reading the version before and after this demonstration is a manual verification step. It is not an automated post-deployment smoke test.
+
 [Back to the activity homepage](index.html)
