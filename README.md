@@ -6,16 +6,16 @@ This site turns my GitHub activity into a published page. Every release is built
 
 ## Recent activity
 <!--START_SECTION:activity-->
-1. 📝 Committed to task2/security-verification-20261118 in [hambur0427/a10-leakguard](https://github.com/hambur0427/a10-leakguard/commit/d303b86061838f3e87e3903ad2a123a0c9c0b4d3)
-2. 🎉 Created a new branch task2/security-verification-20261118 in [hambur0427/a10-leakguard](https://github.com/hambur0427/a10-leakguard/tree/task2/security-verification-20261118)
-3. 🔀 Merged PR #13 in [hambur0427/a10-leakguard](https://github.com/hambur0427/a10-leakguard/pull/13)
-4. 🗣 Commented on issue #6 in [hambur0427/a10-leakguard](https://github.com/hambur0427/a10-leakguard/issues/6#issuecomment-6955160462)
-5. 🗣 Commented on issue #7 in [hambur0427/a10-leakguard](https://github.com/hambur0427/a10-leakguard/issues/7#issuecomment-6955161176)
-6. 📥 Opened PR #13 in [hambur0427/a10-leakguard](https://github.com/hambur0427/a10-leakguard/pull/13)
-7. Added [hambur0427/a10-leakguard](https://github.com/hambur0427/a10-leakguard)
-8. 📝 Committed to main in [yu1234552026/a9-devsecops-lab](https://github.com/yu1234552026/a9-devsecops-lab/commit/349033a9f0f80512387ea7d6389eded13bfe27ea)
-9. 📝 Committed to main in [yu1234552026/a9-devsecops-lab](https://github.com/yu1234552026/a9-devsecops-lab/commit/d467d0e3e754e287c4cb83088d057dc3b13cbe53)
-10. 📝 Committed to main in [yu1234552026/a9-devsecops-lab](https://github.com/yu1234552026/a9-devsecops-lab/commit/2bcc5bd37bd2bf8b8e0ea1d407c1c89122fd4a76)
+1. 🗣 Commented on a review of PR #18 in [hambur0427/a10-leakguard](https://github.com/hambur0427/a10-leakguard/pull/18#pullrequestreviewcomment-4682628461)
+2. 🗣 Commented on a review of PR #17 in [hambur0427/a10-leakguard](https://github.com/hambur0427/a10-leakguard/pull/17#pullrequestreviewcomment-4682402443)
+3. 🗣 Commented on a review of PR #17 in [hambur0427/a10-leakguard](https://github.com/hambur0427/a10-leakguard/pull/17#pullrequestreviewcomment-4682402432)
+4. 🔀 Merged PR #18 in [hambur0427/a10-leakguard](https://github.com/hambur0427/a10-leakguard/pull/18)
+5. ❌ Closed issue #15 in [hambur0427/a10-leakguard](https://github.com/hambur0427/a10-leakguard/issues/15)
+6. 🔎 Updated PR #17 in [hambur0427/a10-leakguard](https://github.com/hambur0427/a10-leakguard/pull/17#pullrequestreview-6042296563)
+7. 🔎 Created PR #18 in [hambur0427/a10-leakguard](https://github.com/hambur0427/a10-leakguard/pull/18#pullrequestreview-6042591730)
+8. 🔎 Created PR #18 in [hambur0427/a10-leakguard](https://github.com/hambur0427/a10-leakguard/pull/18#pullrequestreview-6042590796)
+9. 📥 Opened PR #18 in [hambur0427/a10-leakguard](https://github.com/hambur0427/a10-leakguard/pull/18)
+10. 🔎 Created PR #17 in [hambur0427/a10-leakguard](https://github.com/hambur0427/a10-leakguard/pull/17#pullrequestreview-6042296563)
 <!--END_SECTION:activity-->
 
 ## Release safety
